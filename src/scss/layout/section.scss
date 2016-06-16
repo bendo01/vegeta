@@ -1,0 +1,12 @@
+.section {
+  background: $section-background;
+  padding: 40px 20px;
+  @include desktop {
+    &.is-medium {
+      padding: 120px 20px;
+    }
+    &.is-large {
+      padding: 240px 20px;
+    }
+  }
+}
