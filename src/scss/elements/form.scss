@@ -1,13 +1,13 @@
 @mixin form-control {
   @extend .control;
-  @each $name, $pair in $colors {
+  @each $name,
+  $pair in $colors {
     $color: nth($pair, 1);
     &.is-#{$name} {
       border-color: $color;
     }
   }
 }
-
 .input {
   @include form-control;
   box-shadow: inset 0 1px 2px rgba($black, 0.1);
@@ -16,30 +16,24 @@
   &[type="search"] {
     border-radius: 290486px;
   }
-
   &.is-small {
     @include control-small;
   }
-
   &.is-medium {
     @include control-medium;
   }
-
   &.is-large {
     @include control-large;
   }
-
   &.is-fullwidth {
     display: block;
     width: 100%;
   }
-
   &.is-inline {
     display: inline;
     width: auto;
   }
 }
-
 .textarea {
   @extend .input;
   display: block;
@@ -51,7 +45,6 @@
   padding: 10px;
   resize: vertical;
 }
-
 .control-with-element {
   cursor: pointer;
   display: inline-block;
@@ -72,24 +65,20 @@
     }
   }
 }
-
 .checkbox {
   @extend .control-with-element;
 }
-
 .radio {
   @extend .control-with-element;
   & + .radio {
     margin-left: 10px;
   }
 }
-
 .select {
   display: inline-block;
   height: 32px;
   position: relative;
   vertical-align: top;
-
   select {
     @include form-control;
     cursor: pointer;
@@ -103,27 +92,23 @@
       display: none;
     }
   }
-
   &.is-fullwidth {
     width: 100%;
     select {
       width: 100%;
     }
   }
-
   &:after {
     @include arrow($link);
     margin-top: -6px;
     right: 16px;
     top: 50%;
   }
-
   &:hover {
     &:after {
       border-color: $link-hover;
     }
   }
-
   &.is-small {
     height: 24px;
     select {
@@ -131,7 +116,6 @@
       padding-right: 28px;
     }
   }
-
   &.is-medium {
     height: 40px;
     select {
@@ -139,7 +123,6 @@
       padding-right: 44px;
     }
   }
-
   &.is-large {
     height: 48px;
     select {
@@ -148,7 +131,6 @@
     }
   }
 }
-
 .label {
   color: $text-strong;
   display: block;
@@ -157,19 +139,18 @@
     margin-bottom: 5px;
   }
 }
-
 .help {
   display: block;
   font-size: $size-small;
   margin-top: 5px;
-  @each $name, $pair in $colors {
+  @each $name,
+  $pair in $colors {
     $color: nth($pair, 1);
     &.is-#{$name} {
       color: $color;
     }
   }
 }
-
 .control-label {
   @include mobile {
     margin-bottom: 5px;
@@ -181,7 +162,6 @@
     text-align: right;
   }
 }
-
 .control {
   position: relative;
   text-align: left;
@@ -191,14 +171,17 @@
   &.has-addons {
     display: flex;
     justify-content: flex-start;
-    .button, .input, .select {
+    .button,
+    .input,
+    .select {
       border-radius: $radius;
       margin-right: -1px;
       width: auto;
       &:hover {
         z-index: 2;
       }
-      &:active, &:focus {
+      &:active,
+      &:focus {
         z-index: 3;
       }
       &:first-child {
@@ -224,7 +207,9 @@
       justify-content: flex-end;
     }
     &.has-addons-fullwidth {
-      .button, .input, .select {
+      .button,
+      .input,
+      .select {
         flex: 1;
       }
     }
@@ -242,17 +227,14 @@
       &:focus + .fa {
         color: $text-strong;
       }
-
       &.is-small + .fa {
         font-size: 10.5px;
         top: 0;
       }
-
       &.is-medium + .fa {
         font-size: 21px;
         top: 8px;
       }
-
       &.is-large + .fa {
         font-size: 21px;
         top: 12px;
@@ -270,14 +252,12 @@
             left: 0;
           }
         }
-
         &.is-medium {
           padding-left: 40px;
           & + .fa {
             left: 8;
           }
         }
-
         &.is-small {
           padding-large: 48px;
           & + .fa {
@@ -286,7 +266,6 @@
         }
       }
     }
-
     &.has-icon-right {
       & > .fa {
         right: 4px;
@@ -299,14 +278,12 @@
             right: 0;
           }
         }
-
         &.is-medium {
           padding-right: 40px;
           & + .fa {
             right: 8px;
           }
         }
-
         &.is-large {
           padding-right: 48px;
           & + .fa {
@@ -316,7 +293,6 @@
       }
     }
   }
-
   &.is-grouped {
     display: flex;
     justify-content: flex-start;
@@ -336,7 +312,6 @@
       justify-content: flex-end;
     }
   }
-
   &.is-horizontal {
     @include tablet {
       display: flex;
@@ -346,7 +321,6 @@
       }
     }
   }
-
   &.is-loading {
     &:after {
       @extend .loader;

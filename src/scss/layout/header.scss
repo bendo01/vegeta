@@ -1,5 +1,4 @@
 $header-height: 50px !default;
-
 .header {
   @include clearfix;
   background: $header-background;
@@ -27,7 +26,6 @@ $header-height: 50px !default;
     height: $header-height;
   }
 }
-
 .header-toggle {
   @extend .hamburger;
   position: absolute;
@@ -38,7 +36,6 @@ $header-height: 50px !default;
     display: none;
   }
 }
-
 // Elements
 .header-item {
   align-items: center;
@@ -69,8 +66,8 @@ $header-height: 50px !default;
     text-align: left;
   }
 }
-
-.header-item a, a.header-item {
+.header-item a,
+a.header-item {
   color: $text;
   &:hover {
     color: $link-hover;
@@ -79,7 +76,6 @@ $header-height: 50px !default;
     color: $link-active;
   }
 }
-
 .header-tab {
   align-items: center;
   border-bottom: 1px solid transparent;
@@ -95,9 +91,7 @@ $header-height: 50px !default;
     border-bottom: 3px solid $link;
     color: $link;
   }
-
 }
-
 // Containers
 .header-left {
   align-items: stretch;
@@ -114,7 +108,6 @@ $header-height: 50px !default;
     margin-left: -10px;
   }
 }
-
 .header-right {
   align-items: stretch;
   @include tablet {
@@ -124,7 +117,6 @@ $header-height: 50px !default;
     margin-left: -10px;
   }
 }
-
 .header-full {
   align-items: stretch;
   display: flex;
@@ -145,7 +137,6 @@ $header-height: 50px !default;
     }
   }
 }
-
 .header-menu {
   @include mobile {
     box-shadow: 0 4px 7px rgba($black, 0.1);
@@ -159,15 +150,14 @@ $header-height: 50px !default;
     }
   }
 }
-
 // States
 .header.is-centered {
   justify-content: center;
-  .header-left, .header-right {
+  .header-left,
+  .header-right {
     justify-content: center;
   }
 }
-
 .header.is-small {
   background: $background;
   box-shadow: none;
@@ -180,7 +170,8 @@ $header-height: 50px !default;
     font-size: 13px;
     height: 40px;
     padding: 8px 10px;
-    &:hover, &.is-active {
+    &:hover,
+    &.is-active {
       border-bottom-width: 2px;
     }
   }

@@ -28,7 +28,6 @@
       }
     }
   }
-
   @include tablet {
     display: flex;
     justify-content: center;
@@ -37,11 +36,10 @@
     }
   }
 }
-
-.hero-head, .hero-foot {
+.hero-head,
+.hero-foot {
   flex-shrink: 0;
 }
-
 .hero-body {
   flex: 1;
   padding: 40px 20px;
@@ -51,7 +49,6 @@
     padding-right: 0;
   }
 }
-
 .hero {
   align-items: stretch;
   background: $hero-background;
@@ -67,7 +64,8 @@
       border-bottom: none;
     }
   }
-  @each $name, $pair in $colors {
+  @each $name,
+  $pair in $colors {
     $color: nth($pair, 1);
     $color-invert: nth($pair, 2);
     &.is-#{$name} {
@@ -75,35 +73,34 @@
       color: $color-invert;
       .title {
         color: $color-invert;
-        a, strong {
+        a,
+        strong {
           color: inherit;
         }
       }
-
       .subtitle {
         color: rgba($color-invert, 0.7);
-        a, strong {
+        a,
+        strong {
           color: $color-invert;
         }
       }
-
       .nav {
         box-shadow: 0 1px 0 rgba($color-invert, 0.2);
       }
-
       .nav-menu {
         @include mobile {
           background: $color;
         }
       }
-
-      a.nav-item, .nav-item a:not(.button) {
+      a.nav-item,
+      .nav-item a:not(.button) {
         color: rgba($color-invert, 0.5);
-        &:hover, &.is-active {
+        &:hover,
+        &.is-active {
           color: $color-invert;
         }
       }
-
       .tabs {
         a {
           color: $color-invert;
@@ -119,7 +116,8 @@
             }
           }
         }
-        &.is-boxed, &.is-toggle {
+        &.is-boxed,
+        &.is-toggle {
           a {
             color: $color-invert;
             &:hover {
@@ -128,7 +126,8 @@
           }
           li.is-active {
             a {
-              &, &:hover {
+              &,
+              &:hover {
                 background: $color-invert;
                 border-color: $color-invert;
                 color: $color;
@@ -137,13 +136,11 @@
           }
         }
       }
-
       &.is-bold {
         $gradient-top-left: darken(saturate(adjust-hue($color, -10deg), 10%), 10%);
         $gradient-bottom-right: lighten(saturate(adjust-hue($color, 10deg), 5%), 5%);
         background-image: linear-gradient(141deg, $gradient-top-left 0%, $color 71%, $gradient-bottom-right 100%);
       }
-
       @include mobile {
         .nav-toggle {
           span {
@@ -166,7 +163,6 @@
       }
     }
   }
-
   &.is-medium {
     @include tablet {
       .hero-body {

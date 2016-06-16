@@ -14,17 +14,17 @@
   padding-right: 0.5em;
   position: relative;
   vertical-align: top;
-
   &:hover {
     border-color: $control-hover-border;
   }
-
-  &:active, &:focus, &.is-active {
+  &:active,
+  &:focus,
+  &.is-active {
     border-color: $control-active-border;
     outline: none;
   }
-
-  &[disabled], &.is-disabled {
+  &[disabled],
+  &.is-disabled {
     background: $background;
     border-color: $control-border;
     cursor: not-allowed;
@@ -34,7 +34,6 @@
     }
   }
 }
-
 @mixin control-small {
   border-radius: $radius;
   font-size: 0.688em;
@@ -43,7 +42,6 @@
   padding-left: 0.375em;
   padding-right: 0.375em;
 }
-
 @mixin control-medium {
   font-size: 1.125em;
   height: 2.5em;
@@ -51,7 +49,6 @@
   padding-left: 0.625em;
   padding-right: 0.625em;
 }
-
 @mixin control-large {
   font-size: 1.5em;
   height: 3em;

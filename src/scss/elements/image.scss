@@ -8,14 +8,20 @@ $dimensions: 16 24 32 48 64 96 128;
     width: 100%;
   }
   // Ratio
-  &.is-square, &.is-1by1, &.is-4by3, &.is-3by2, &.is-16by9, &.is-2by1 {
+  &.is-square,
+  &.is-1by1,
+  &.is-4by3,
+  &.is-3by2,
+  &.is-16by9,
+  &.is-2by1 {
     img {
       @include overlay;
       height: 100%;
       width: 100%;
     }
   }
-  &.is-square, &.is-1by1 {
+  &.is-square,
+  &.is-1by1 {
     padding-top: 100%;
   }
   &.is-4by3 {

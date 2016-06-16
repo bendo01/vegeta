@@ -3,7 +3,8 @@
   color: $text-strong;
   margin-bottom: 20px;
   width: 100%;
-  td, th {
+  td,
+  th {
     border: 1px solid $border;
     border-width: 0 0 1px;
     padding: 8px 10px;
@@ -23,7 +24,6 @@
         }
       }
     }
-
     &.is-link {
       padding: 0;
       & > a {
@@ -35,60 +35,58 @@
         }
       }
     }
-
     &.is-narrow {
       white-space: nowrap;
       width: 1%;
     }
-
-
   }
-
   th {
     color: $text-strong;
     text-align: left;
   }
-
   tr {
     &:hover {
       background: $background;
       color: $text-strong;
     }
   }
-  thead td, th {
+  thead td,
+  th {
     border-width: 0 0 2px;
-      color: $text-light;
+    color: $text-light;
   }
   tbody {
     tr {
       &:last-child {
-        td, th {
+        td,
+        th {
           border-bottom-width: 0;
         }
       }
     }
   }
-
-  tfoot td, th {
+  tfoot td,
+  th {
     border-width: 2px 0 0;
-      color: $text-light;
+    color: $text-light;
   }
-
   &.is-bordered {
-    td, th {
+    td,
+    th {
       border-width: 1px;
     }
     tr {
       &:last-child {
-        td, th {
+        td,
+        th {
           border-bottom-width: 1px;
         }
       }
     }
   }
-
   &.is-narrow {
-    td, th {
+    td,
+    th {
       padding: 5px 10px;
       &.is-icon {
         padding: 2px;
@@ -107,7 +105,6 @@
       }
     }
   }
-
   &.is-striped {
     tbody {
       tr {

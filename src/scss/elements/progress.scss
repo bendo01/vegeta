@@ -17,7 +17,8 @@
   &::-moz-progress-bar {
     background: $text;
   }
-  @each $name, $pair in $colors {
+  @each $name,
+  $pair in $colors {
     $color: nth($pair, 1);
     &.is-#{$name} {
       &::-webkit-progress-value {

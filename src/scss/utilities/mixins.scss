@@ -10,7 +10,6 @@
   transform: rotate(-45deg);
   width: 0.438em;
 }
-
 @mixin clearfix {
   &:after {
     clear: both;
@@ -18,7 +17,6 @@
     display: table;
   }
 }
-
 @mixin center($size) {
   left: 50%;
   margin-left: -($size / 2);
@@ -26,7 +24,6 @@
   position: absolute;
   top: 50%;
 }
-
 @mixin fa($size, $dimensions) {
   display: inline-block;
   font-size: $size;
@@ -36,7 +33,6 @@
   vertical-align: top;
   width: $dimensions;
 }
-
 @mixin overlay($offset: 0) {
   bottom: $offset;
   left: $offset;
@@ -44,7 +40,6 @@
   right: $offset;
   top: $offset;
 }
-
 @mixin placeholder {
   $placeholders: ':-moz' ':-webkit-input' '-moz' '-ms-input';
   @each $placeholder in $placeholders {
@@ -53,7 +48,6 @@
     }
   }
 }
-
 @mixin replace($background, $width, $height) {
   background: $background center center no-repeat;
   background-size: $width $height;
@@ -64,55 +58,46 @@
   text-indent: -18155.375em;
   width: $width;
 }
-
 @mixin from($device) {
   @media screen and (min-width: $device) {
     @content;
   }
 }
-
 @mixin until($device) {
   @media screen and (max-width: ($device - 1px)) {
     @content;
   }
 }
-
 @mixin mobile {
   @media screen and (max-width: ($tablet - 1px)) {
     @content;
   }
 }
-
 @mixin tablet {
   @media screen and (min-width: $tablet) {
     @content;
   }
 }
-
 @mixin tablet-only {
   @media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
     @content;
   }
 }
-
 @mixin touch {
   @media screen and (max-width: ($desktop - 1px)) {
     @content;
   }
 }
-
 @mixin desktop {
   @media screen and (min-width: $desktop) {
     @content;
   }
 }
-
 @mixin desktop-only {
   @media screen and (min-width: $desktop) and (max-width: ($widescreen - 1px)) {
     @content;
   }
 }
-
 @mixin widescreen {
   @media screen and (min-width: $widescreen) {
     @content;

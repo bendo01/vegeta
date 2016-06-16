@@ -1,8 +1,10 @@
-.title, .subtitle {
+.title,
+.subtitle {
   @extend .block;
   font-weight: $weight-title-normal;
   word-break: break-word;
-  em, span {
+  em,
+  span {
     font-weight: $weight-title-normal;
   }
   a {
@@ -17,7 +19,6 @@
     vertical-align: bottom;
   }
 }
-
 .title {
   color: $text-strong;
   font-size: $size-large;
@@ -26,19 +27,15 @@
     display: inline-block;
     font-size: $size-large;
   }
-
   strong {
     color: inherit;
   }
-
   & + .highlight {
     margin-top: -10px;
   }
-
   & + .subtitle {
     margin-top: -10px;
   }
-
   @each $size in $sizes {
     $i: index($sizes, $size);
     &.is-#{$i} {
@@ -48,7 +45,6 @@
       }
     }
   }
-
   &.is-normal {
     font-weight: 400;
     strong {
@@ -61,7 +57,6 @@
     }
   }
 }
-
 .subtitle {
   color: $text;
   font-size: $size-medium;
