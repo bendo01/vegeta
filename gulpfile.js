@@ -36,7 +36,7 @@ gulp.task('compile-scss', function () {
 });
 
 // apply PostCSS plugins
-gulp.task('css', function() {
+gulp.task('minify-css', function() {
   return gulp.src('dist/css/vegeta.css')
     .pipe(postcss([
       require('autoprefixer')({}),
