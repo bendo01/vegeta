@@ -16,16 +16,11 @@ var config = {
   npmDir: './node_modules'
 }
 
-gulp.task('font-awesome', function() { 
-    return gulp.src(config.npmDir + '/font-awesome/fonts/**.*') .pipe(gulp.dest('./dist/fonts')); 
-});
-
 gulp.task('compile-scss', function () {
-  gulp.src('src/scss/**/*.scss')
+  gulp.src('vegeta.scss')
   .pipe(sourcemaps.init())
   .pipe(sass({includePaths: [
     'src/scss',
-    config.npmDir + '/bulma',
     config.npmDir + '/font-awesome/scss'
   ]}))
   //.pipe(sass({outputStyle: 'compressed'}))
@@ -35,17 +30,23 @@ gulp.task('compile-scss', function () {
   }))
   .pipe(postcss([
       require('autoprefixer')({}),
-      require('cssnano')
+      //require('cssnano')
   ]))
   .pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('browser-sync', function() {
-    browserSync.init(["dist/css/*.css"], {
-        server: {
-            baseDir: "./"
-        }
-    });
+// apply PostCSS plugins
+gulp.task('css', function() {
+  return gulp.src('dist/css/vegeta.css')
+    .pipe(postcss([
+      require('autoprefixer')({}),
+      require('cssnano')
+    ]))
+    .pipe(gulp.dest('dist/css/vegeta.min.css'));
+});
+
+gulp.task('font-awesome', function() { 
+    return gulp.src(config.npmDir + '/font-awesome/fonts/**.*') .pipe(gulp.dest('./dist/fonts')); 
 });
 
 gulp.task('default', ['font-awesome', 'compile-scss', 'browser-sync'], function () {
