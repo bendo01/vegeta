@@ -1,14 +1,19 @@
 {
   "name": "vegeta",
-  "version": "0.0.0",
-  "description": "Bulma Alternative",
+  "version": "1.0.0",
+  "description": "Vegeta is Bulma Alternative",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "bendo01@yahoo.com.au",
-  "license": "ISC",
+  "author": "benny L.E.P <bendo01@gmail.com> (http://xdbonline.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bendo01/vegeta.git"
+  },
+  "bugs": "https://github.com/bendo01/vegeta/issues",
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "browser-sync": "^2.12.10",

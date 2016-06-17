@@ -45,7 +45,7 @@
   padding: 10px;
   resize: vertical;
 }
-.control-with-element {
+@mixin control-with-element {
   cursor: pointer;
   display: inline-block;
   line-height: 16px;
@@ -66,10 +66,10 @@
   }
 }
 .checkbox {
-  @extend .control-with-element;
+  @include control-with-element;
 }
 .radio {
-  @extend .control-with-element;
+  @include control-with-element;
   & + .radio {
     margin-left: 10px;
   }
