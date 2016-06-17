@@ -1,14 +1,14 @@
 @mixin arrow ($color) {
-  border: 0.063em solid $color;
+  border: 1px solid $color;
   border-right: 0;
   border-top: 0;
   content: " ";
   display: block;
-  height: 0.438em;
+  height: 7px;
   pointer-events: none;
   position: absolute;
   transform: rotate(-45deg);
-  width: 0.438em;
+  width: 7px;
 }
 @mixin clearfix {
   &:after {

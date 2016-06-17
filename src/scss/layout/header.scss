@@ -3,7 +3,7 @@ $header-height: 50px !default;
   @include clearfix;
   background: $header-background;
   display: flex;
-  line-height: 1.5em;
+  line-height: 24px;
   min-height: $header-height;
   position: relative;
   text-align: center;
@@ -15,7 +15,7 @@ $header-height: 50px !default;
     width: 100%;
   }
   &.has-shadow {
-    box-shadow: 0 0.125em 0.188em rgba($black, 0.1);
+    box-shadow: 0 2px 3px rgba($black, 0.1);
   }
   @include mobile {
     .container {
@@ -40,7 +40,7 @@ $header-height: 50px !default;
 .header-item {
   align-items: center;
   display: flex;
-  padding: 0.625em;
+  padding: 10px;
   a {
     flex-grow: 1;
   }
