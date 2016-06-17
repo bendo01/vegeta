@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ['framework', 'responsive', 'flexbox', 'sass', 'css'],
-  "author": "benny L.E.P <bendo01@gmail.com> (http://xdbonline.com)",
+  "keywords": ["framework", "responsive", "flexbox", "sass", "css"],
+  "author": "benny L.E.P <bendo01@gmail.com> (http://xdbonline.tk)",
   "license": "MIT",
   "repository": {
     "type": "git",
