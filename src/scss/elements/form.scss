@@ -1,5 +1,5 @@
 @mixin form-control {
-  @extend .control;
+  @include control;
   @each $name,
   $pair in $colors {
     $color: nth($pair, 1);

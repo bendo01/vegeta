@@ -32,7 +32,9 @@ gulp.task('compile-scss', function () {
       require('autoprefixer')({}),
       //require('cssnano')
   ]))
-  .pipe(gulp.dest('dist/css'));
+  .pipe(gulp.dest('dist/css'))
+  .pipe(gulp.dest("test/css"))
+  .pipe(browserSync.stream());
 });
 
 // apply PostCSS plugins
@@ -42,14 +44,25 @@ gulp.task('minify-css', function() {
       require('autoprefixer')({}),
       require('cssnano')
     ]))
-    .pipe(gulp.dest('dist/css/vegeta.min.css'));
+    .pipe(gulp.dest('dist/css/minified'));
 });
 
 gulp.task('font-awesome', function() { 
-    return gulp.src(config.npmDir + '/font-awesome/fonts/**.*') .pipe(gulp.dest('./dist/fonts')); 
+    return gulp.src(config.npmDir + '/font-awesome/fonts/**.*') 
+    .pipe(gulp.dest('./dist/fonts'))
+    .pipe(gulp.dest("test/fonts"))
+    .pipe(browserSync.stream());
+});
+
+gulp.task('browser-sync', function() {
+    browserSync.init(["dist/css/*.css"], {
+        server: {
+            baseDir: "./test"
+        }
+    });
 });
 
 gulp.task('default', ['font-awesome', 'compile-scss', 'browser-sync'], function () {
-  gulp.watch("src/scss/**/*.scss", ['compile-scss']).on('change', browserSync.reload);
-  gulp.watch('./*.html').on('change', browserSync.reload);
+  gulp.watch("src/scss/**/*.scss", ['compile-scss', 'minify-css']).on('change', browserSync.reload);
+  gulp.watch('./test/*.html').on('change', browserSync.reload);
 });

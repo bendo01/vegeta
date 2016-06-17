@@ -29,7 +29,7 @@
     border-color: $control-border;
     cursor: not-allowed;
     pointer-events: none;
-    +placeholder {
+    @include placeholder {
       color: rgba($control, 0.3);
     }
   }

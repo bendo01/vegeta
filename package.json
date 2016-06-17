@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "bendo01@yahoo.com.au",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^6.3.6",
