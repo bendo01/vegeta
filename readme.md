@@ -1,7 +1,14 @@
 # Vegeta
 [![npm](https://img.shields.io/npm/v/vegeta.svg)](https://www.npmjs.com/package/vegeta)
 [![npm](https://img.shields.io/npm/dm/vegeta.svg)](https://www.npmjs.com/package/vegeta)
+
 Vegeta is a modern CSS Rewritten as SCSS format from framework based on [Bulma CSS framework](http://bulma.io). which is using SASS format
+
+### NPM
+
+```sh
+npm install vegeta
+```
 
 ## CSS only
 Like Bulma, Vegeta too is a **CSS** framework. As such, the sole output is a single CSS file.
