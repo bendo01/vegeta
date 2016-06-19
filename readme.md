@@ -12,7 +12,7 @@ npm install vegeta
 
 ## CSS only
 Like Bulma, Vegeta too is a **CSS** framework. As such, the sole output is a single CSS file.
-There is **no** JavaScript included. People generally want to use their own JS implementation (and usually already have one). Bulma can be considered "environment agnostic": it's just the style layer on top of the logic.
+There is **no** JavaScript included. People generally want to use their own JS implementation (and usually already have one). Vegeta can be considered "environment agnostic": it's just the style layer on top of the logic.
 
 ## Browser Support
 
