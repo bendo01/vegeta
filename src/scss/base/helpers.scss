@@ -55,6 +55,7 @@ $displays: 'block' 'flex' 'inline' 'inline-block' 'inline-flex';
 .is-overlay {
   @include overlay;
 }
+// Text
 .has-text-centered {
   text-align: center;
 }
@@ -64,6 +65,10 @@ $displays: 'block' 'flex' 'inline' 'inline-block' 'inline-flex';
 .has-text-right {
   text-align: right;
 }
+.has-text-justify {
+  text-align: justify;
+}
+
 .is-hidden {
   display: none !important;
 }
