@@ -103,3 +103,14 @@
     @content;
   }
 }
+/* additional vegeta mixin */
+@mixin background-and-text-color {
+  @each $colorname, $colornumber in $colorlists {
+    &.text-is-#{$colorname} {
+      color: $colornumber;
+    }
+    &.background-is-#{$colorname} {
+      background: $colornumber;
+    }
+  }
+}
