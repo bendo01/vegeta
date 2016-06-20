@@ -23,6 +23,12 @@ $dimensions: 16 24 32 48 64 96 128;
   &.is-square,
   &.is-1by1 {
     padding-top: 100%;
+    &.circular-square {
+      img {
+        border-radius: 50%;
+        padding: 13px;
+      }
+    }
   }
   &.is-4by3 {
     padding-top: 75%;
@@ -40,6 +46,7 @@ $dimensions: 16 24 32 48 64 96 128;
     &.is-#{$dimension}x#{$dimension} {
       height: $dimension * 1px;
       width: $dimension * 1px;
+      @include circular--square;
     }
   }
 }

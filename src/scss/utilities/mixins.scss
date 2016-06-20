@@ -114,3 +114,11 @@
     }
   }
 }
+
+@mixin circular--square {
+  &.circular-square {
+    img {
+      border-radius: 50%;
+    }
+  }
+}
