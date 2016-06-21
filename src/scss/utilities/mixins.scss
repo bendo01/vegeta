@@ -122,3 +122,49 @@
     }
   }
 }
+
+/* https://techblog.livingsocial.com/blog/2015/04/06/responsive-tables-in-pure-css */
+/* http://www.w3schools.com/howto/howto_css_table_responsive.asp */
+
+@mixin table-responsive-handler($allow-table-responsive: 'dont', $allow-mobile-table-view:'dont') {
+  @if($allow-table-responsive == 'yes') {
+    &.table-responsive {
+      overflow-x: auto;
+    }
+  }
+  @if($allow-mobile-table-view == 'yes') {
+    @include mobile {
+      & {
+        border: 0;
+      }
+
+      & thead,tfoot {
+        display: none;
+      }
+
+      & tr {
+        margin-bottom: 10px;
+        display: block;
+        border-bottom: 2px solid $border;
+      }
+
+      & td {
+        display: block;
+        text-align: right;
+        font-size: 13px;
+        border-bottom: 1px dotted $border;
+      }
+
+      & td:last-child {
+        border-bottom: 0;
+      }
+
+      & td:before {
+        content: attr(data-label);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
+  }
+}

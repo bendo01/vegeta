@@ -114,3 +114,5 @@ $card-width: 300px !default;
 $card-radius: 3px !default;
 $colorlists: (black: $black, grey-darker: $grey-darker, grey-dark: $grey-dark, grey:$grey, grey-light: $grey-light, grey-lighter: $grey-lighter, white: $white, blue: $blue, green: $green, orange: $orange, purple: $purple, red:$red, turquoise: $turquoise, yellow: $yellow, primary: $primary, info: $info, success: $success, warning: $warning, danger: $danger) !default;
 $block-base-margin: 1.25em;
+$allow-table-responsive:dont;
+$allow-mobile-table-view:dont;

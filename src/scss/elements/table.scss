@@ -120,4 +120,5 @@
       }
     }
   }
+  @include table-responsive-handler($allow-table-responsive, $allow-mobile-table-view);
 }
