@@ -1,3 +1,7 @@
+.responsive-table {
+  overflow-x: auto;
+}
+
 .table {
   background: $table-background;
   color: $text-strong;
@@ -120,5 +124,4 @@
       }
     }
   }
-  @include table-responsive-handler($allow-table-responsive, $allow-mobile-table-view);
 }

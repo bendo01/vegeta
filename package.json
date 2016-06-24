@@ -1,6 +1,6 @@
 {
   "name": "vegeta",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "Vegeta is Bulma Alternative",
   "main": "index.js",
   "scripts": {
