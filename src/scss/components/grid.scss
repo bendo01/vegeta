@@ -5,28 +5,22 @@
     flex: none;
   }
   .columns.is-mobile > &.is-full {
-    flex: none;
-    width: 100%;
+    flex: 0 0 100%;
   }
   .columns.is-mobile > &.is-three-quarters {
-    flex: none;
-    width: 75%;
+    flex: 0 0 75%;
   }
   .columns.is-mobile > &.is-two-thirds {
-    flex: none;
-    width: 66.6666%;
+    flex: 0 0 66.6666%;
   }
   .columns.is-mobile > &.is-half {
-    flex: none;
-    width: 50%;
+    flex: 0 0 50%;
   }
   .columns.is-mobile > &.is-one-third {
-    flex: none;
-    width: 33.3333%;
+    flex: 0 0 33.3333%;
   }
   .columns.is-mobile > &.is-one-quarter {
-    flex: none;
-    width: 25%;
+    flex: 0 0 25%;
   }
   .columns.is-mobile > &.is-offset-three-quarters {
     margin-left: 75%;
@@ -45,8 +39,7 @@
   }
   @for $i from 1 through 12 {
     .columns.is-mobile > &.is-#{$i} {
-      flex: none;
-      width: ($i / 12) * 100%;
+      flex: 0 0 (($i / 12) * 100%);
     }
     .columns.is-mobile > &.is-offset-#{$i} {
       margin-left: ($i / 12) * 100%;
@@ -57,28 +50,22 @@
       flex: none;
     }
     &.is-full-mobile {
-      flex: none;
-      width: 100%;
+      flex: 0 0 100%;
     }
     &.is-three-quarters-mobile {
-      flex: none;
-      width: 75%;
+      flex: 0 0 75%;
     }
     &.is-two-thirds-mobile {
-      flex: none;
-      width: 66.6666%;
+      flex: 0 0 66.6666%;
     }
     &.is-half-mobile {
-      flex: none;
-      width: 50%;
+      flex: 0 0 50%;
     }
     &.is-one-third-mobile {
-      flex: none;
-      width: 33.3333%;
+      flex: 0 0 33.3333%;
     }
     &.is-one-quarter-mobile {
-      flex: none;
-      width: 25%;
+      flex: 0 0 25%;
     }
     &.is-offset-three-quarters-mobile {
       margin-left: 75%;
@@ -97,8 +84,7 @@
     }
     @for $i from 1 through 12 {
       &.is-#{$i}-mobile {
-        flex: none;
-        width: ($i / 12) * 100%;
+        flex: 0 0 (($i / 12) * 100%);
       }
       &.is-offset-#{$i}-mobile {
         margin-left: ($i / 12) * 100%;
@@ -112,33 +98,27 @@
     }
     &.is-full,
     &.is-full-tablet {
-      flex: none;
-      width: 100%;
+      flex: 0 0 100%;
     }
     &.is-three-quarters,
     &.is-three-quarters-tablet {
-      flex: none;
-      width: 75%;
+      flex: 0 0 75%;
     }
     &.is-two-thirds,
     &.is-two-thirds-tablet {
-      flex: none;
-      width: 66.6666%;
+      flex: 0 0 66.6666%;
     }
     &.is-half,
     &.is-half-tablet {
-      flex: none;
-      width: 50%;
+      flex: 0 0 50%;
     }
     &.is-one-third,
     &.is-one-third-tablet {
-      flex: none;
-      width: 33.3333%;
+      flex: 0 0 33.3333%;
     }
     &.is-one-quarter,
     &.is-one-quarter-tablet {
-      flex: none;
-      width: 25%;
+      flex: 0 0 25%;
     }
     &.is-offset-three-quarters,
     &.is-offset-three-quarters-tablet {
@@ -163,8 +143,7 @@
     @for $i from 1 through 12 {
       &.is-#{$i},
       &.is-#{$i}-tablet {
-        flex: none;
-        width: ($i / 12) * 100%;
+        flex: 0 0 (($i / 12) * 100%);
       }
       &.is-offset-#{$i},
       &.is-offset-#{$i}-tablet {
@@ -177,28 +156,22 @@
       flex: none;
     }
     &.is-full-desktop {
-      flex: none;
-      width: 100%;
+      flex: 0 0 100%;
     }
     &.is-three-quarters-desktop {
-      flex: none;
-      width: 75%;
+      flex: 0 0 75%;
     }
     &.is-two-thirds-desktop {
-      flex: none;
-      width: 66.6666%;
+      flex: 0 0 66.6666%;
     }
     &.is-half-desktop {
-      flex: none;
-      width: 50%;
+      flex: 0 0 50%;
     }
     &.is-one-third-desktop {
-      flex: none;
-      width: 33.3333%;
+      flex: 0 0 33.3333%;
     }
     &.is-one-quarter-desktop {
-      flex: none;
-      width: 25%;
+      flex: 0 0 25%;
     }
     &.is-offset-three-quarters-desktop {
       margin-left: 75%;
@@ -217,8 +190,7 @@
     }
     @for $i from 1 through 12 {
       &.is-#{$i}-desktop {
-        flex: none;
-        width: ($i / 12) * 100%;
+        flex: 0 0 (($i / 12) * 100%);
       }
       &.is-offset-#{$i}-desktop {
         margin-left: ($i / 12) * 100%;
@@ -230,28 +202,22 @@
       flex: none;
     }
     &.is-full-widescreen {
-      flex: none;
-      width: 100%;
+      flex: 0 0 100%;
     }
     &.is-three-quarters-widescreen {
-      flex: none;
-      width: 75%;
+      flex: 0 0 75%;
     }
     &.is-two-thirds-widescreen {
-      flex: none;
-      width: 66.6666%;
+      flex: 0 0 66.6666%;
     }
     &.is-half-widescreen {
-      flex: none;
-      width: 50%;
+      flex: 0 0 50%;
     }
     &.is-one-third-widescreen {
-      flex: none;
-      width: 33.3333%;
+      flex: 0 0 33.3333%;
     }
     &.is-one-quarter-widescreen {
-      flex: none;
-      width: 25%;
+      flex: 0 0 25%;
     }
     &.is-offset-three-quarters-widescreen {
       margin-left: 75%;
@@ -270,8 +236,7 @@
     }
     @for $i from 1 through 12 {
       &.is-#{$i}-widescreen {
-        flex: none;
-        width: ($i / 12) * 100%;
+        flex: 0 0 (($i / 12) * 100%);
       }
       &.is-offset-#{$i}-widescreen {
         margin-left: ($i / 12) * 100%;
@@ -374,9 +339,8 @@
       display: flex;
     }
     @for $i from 1 through 12 {
-      &.is-#{$i} {
-        flex: none;
-        width: ($i / 12) * 100%;
+      &.is-#{$i} {        
+        flex: 0 0 (($i / 12) * 100%);
       }
     }
   }
