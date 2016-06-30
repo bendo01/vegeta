@@ -59,7 +59,7 @@ a.nav-item {
 // Containers
 .nav-menu {
   @include mobile {
-    background: $white;
+    background-color: $white;
     box-shadow: 0 4px 7px rgba($black, 0.1);
     left: 0;
     display: none;
@@ -99,7 +99,7 @@ a.nav-item {
 }
 .nav {
   align-items: stretch;
-  background: $nav-background;
+  background-color: $nav-background;
   display: flex;
   min-height: $nav-height;
   position: relative;

@@ -11,11 +11,11 @@
     display: block;
     padding: 5px 10px;
     &:hover {
-      background: $background;
+      background-color: $background;
       color: $link;
     }
     &.is-active {
-      background: $link;
+      background-color: $link;
       color: $link-invert;
     }
   }

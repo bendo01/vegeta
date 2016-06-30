@@ -1,5 +1,5 @@
 html {
-  background: $body-background;
+  background-color: $body-background;
   font-size: $size-normal;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -46,7 +46,7 @@ a {
   }
 }
 code {
-  background: $code-background;
+  background-color: $code-background;
   color: $code;
   font-size: 0.750em;
   font-weight: normal;
@@ -75,12 +75,12 @@ strong {
   font-weight: $weight-bold;
 }
 pre {
-  background: $pre-background;
+  background-color: $pre-background;
   color: $pre;
   white-space: pre;
   word-wrap: normal;
   code {
-    background: $pre-background;
+    background-color: $pre-background;
     color: $pre;
     display: block;
     overflow-x: auto;

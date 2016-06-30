@@ -1,5 +1,5 @@
 .section {
-  background: $section-background;
+  background-color: $section-background;
   padding: 40px 20px;
   @include desktop {
     &.is-medium {

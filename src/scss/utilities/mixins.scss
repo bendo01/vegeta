@@ -49,7 +49,9 @@
   }
 }
 @mixin replace($background, $width, $height) {
-  background: $background center center no-repeat;
+  background-color: $background;
+  background-position: center center;
+  background-repeat: no-repeat;
   background-size: $width $height;
   display: block;
   height: $height;
@@ -110,7 +112,7 @@
       color: $colornumber;
     }
     &.background-is-#{$colorname} {
-      background: $colornumber;
+      background-color: $colornumber;
     }
   }
 }
@@ -126,7 +128,7 @@
 /* https://techblog.livingsocial.com/blog/2015/04/06/responsive-tables-in-pure-css */
 /* http://www.w3schools.com/howto/howto_css_table_responsive.asp */
 
-@mixin mobile-responsive-handler($allow-mobile-table-view:'dont') {  
+@mixin mobile-responsive-handler($allow-mobile-table-view:'dont') {
   @if($allow-mobile-table-view == 'yes') {
     @include mobile {
       & {

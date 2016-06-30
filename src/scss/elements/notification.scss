@@ -1,7 +1,7 @@
 .notification {
   @extend .block;
   @include clearfix;
-  background: $background;
+  background-color: $background;
   border-radius: $radius;
   padding: 16px 20px;
   position: relative;
@@ -19,7 +19,7 @@
     $color: nth($pair, 1);
     $color-invert: nth($pair, 2);
     &.is-#{$name} {
-      background: $color;
+      background-color: $color;
       color: $color-invert;
     }
   }

@@ -9,23 +9,23 @@
   padding: 0;
   width: 100%;
   &::-webkit-progress-bar {
-    background: $border;
+    background-color: $border;
   }
   &::-webkit-progress-value {
-    background: $text;
+    background-color: $text;
   }
   &::-moz-progress-bar {
-    background: $text;
+    background-color: $text;
   }
   @each $name,
   $pair in $colors {
     $color: nth($pair, 1);
     &.is-#{$name} {
       &::-webkit-progress-value {
-        background: $color;
+        background-color: $color;
       }
       &::-moz-progress-bar {
-        background: $color;
+        background-color: $color;
       }
     }
   }
