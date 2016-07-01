@@ -108,6 +108,12 @@
       background-color: $border;
       color: $text-strong;
     }
+    &.is-inverted {
+      color: $text-invert;
+      &:hover, &:focus {
+        background: transparentize($text-invert, 0.9);
+      }
+    }
   }
   // Sizes
   &.is-small {
