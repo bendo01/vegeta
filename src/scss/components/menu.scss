@@ -37,3 +37,32 @@
     margin-top: 20px;
   }
 }
+
+.menu {
+  // Modifiers
+  &.is-inverted {
+    background: $black;
+    .menu-list {
+      a {
+        color: $text-invert;
+        &:hover {
+          background: $background-invert;
+          color: $link-invert;
+        }
+        // Modifiers
+        &.is-active {
+          background: $link-invert;
+          color: $link;
+        }
+      }
+      li {
+        ul {
+          border-left: 1px solid $border-invert;
+        }
+      }
+    }
+    .menu-label {
+      color: $text-light-invert;
+    }
+  }
+}

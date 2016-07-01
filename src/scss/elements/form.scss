@@ -7,6 +7,9 @@
       border-color: $color;
     }
   }
+  &.is-inverted {
+    color: $text-invert;
+  }
 }
 .input {
   @include form-control;
@@ -42,7 +45,7 @@
   max-width: 100%;
   min-height: 120px;
   min-width: 100%;
-  padding: 10px;
+  padding: 8px;
   resize: vertical;
 }
 @mixin control-with-element {

@@ -62,7 +62,11 @@ $dark-invert: $light !default;
 // General colors
 $body-background: $grey-lighter !default;
 $background: $grey-lighter !default;
+$background-invert: $grey-darker !default;
+// BOrder colors
 $border: $grey-light !default;
+$border-invert: $grey-dark !default
+$text-light-invert: $grey-dark !default;
 $border-hover: $grey !default;
 // Text colors
 $text-invert: findColorInvert($text) !default;
