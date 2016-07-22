@@ -1,7 +1,7 @@
 .tabs {
   @extend %block;
 
-  @extend .unselectable;
+  @extend %unselectable;
 
   align-items: stretch;
   display: flex;
@@ -155,7 +155,7 @@
     }
 
     ul {
-      border-bottom: none;
+      border-bottom: 0;
     }
   }
 

@@ -4,6 +4,10 @@
   @include overlay;
 
   overflow: hidden;
+  // Responsiveness
+  @include mobile {
+    display: none;
+  }
 
   video {
     left: 50%;
@@ -16,12 +20,7 @@
 
   // Modifiers
   &.is-transparent {
-    opacity: 0.3;
-  }
-
-  // Responsiveness
-  @include mobile {
-    display: none;
+    opacity: .3;
   }
 }
 
@@ -79,12 +78,12 @@
 
   .nav {
     background: none;
-    box-shadow: 0 1px 0 rgba($border, 0.3);
+    box-shadow: 0 1px 0 rgba($border, .3);
   }
 
   .tabs {
     ul {
-      border-bottom: none;
+      border-bottom: 0;
     }
   }
 
@@ -107,7 +106,7 @@
       }
 
       .subtitle {
-        color: rgba($color-invert, 0.7);
+        color: rgba($color-invert, .7);
 
         a,
         strong {
@@ -116,7 +115,7 @@
       }
 
       .nav {
-        box-shadow: 0 1px 0 rgba($color-invert, 0.2);
+        box-shadow: 0 1px 0 rgba($color-invert, .2);
       }
 
       .nav-menu {
@@ -127,7 +126,7 @@
 
       a.nav-item,
       .nav-item a:not(.button) {
-        color: rgba($color-invert, 0.5);
+        color: rgba($color-invert, .5);
 
         &:hover,
         &.is-active {
@@ -138,7 +137,7 @@
       .tabs {
         a {
           color: $color-invert;
-          opacity: 0.5;
+          opacity: .5;
 
           &:hover {
             opacity: 1;
@@ -157,7 +156,7 @@
             color: $color-invert;
 
             &:hover {
-              background-color: rgba($black, 0.1);
+              background-color: rgba($black, .1);
             }
           }
 
@@ -188,7 +187,7 @@
           }
 
           &:hover {
-            background-color: rgba($black, 0.1);
+            background-color: rgba($black, .1);
           }
 
           &.is-active {
@@ -200,7 +199,7 @@
 
         .nav-menu {
           .nav-item {
-            border-top-color: rgba($color-invert, 0.2);
+            border-top-color: rgba($color-invert, .2);
           }
         }
       }

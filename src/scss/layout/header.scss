@@ -2,7 +2,7 @@ $header-height: 50px !default;
 
 .header {
   @include clearfix;
-
+  // Responsiveness
   background-color: $white;
   display: flex;
   line-height: 24px;
@@ -10,6 +10,16 @@ $header-height: 50px !default;
   position: relative;
   text-align: center;
   z-index: 2;
+
+  @include mobile {
+    .container {
+      flex-direction: column;
+    }
+  }
+
+  @include tablet {
+    height: $header-height;
+  }
 
   .container {
     align-items: stretch;
@@ -20,19 +30,36 @@ $header-height: 50px !default;
 
   // Modifiers
   &.has-shadow {
-    box-shadow: 0 2px 3px rgba($black, 0.1);
+    box-shadow: 0 2px 3px rgba($black, .1);
   }
+  // States
+  &.is-centered {
+    justify-content: center;
 
-  // Responsiveness
-  @include mobile {
+    .header-left,
+    .header-right {
+      justify-content: center;
+  }
+  &.is-small {
+    background-color: $background;
+    box-shadow: none;
+    height: 40px;
+    z-index: 1;
+
     .container {
-      flex-direction: column;
+      height: 40px;
     }
-  }
 
+    .header-tab {
+      font-size: 13px;
+      height: 40px;
+      padding: 8px 10px;
 
-  @include tablet {
-    height: $header-height;
+      &:hover,
+      &.is-active {
+        border-bottom-width: 2px;
+      }
+    }
   }
 }
 
@@ -184,50 +211,17 @@ a.header-item {
 .header-menu {
   // Responsiveness
   @include mobile {
-    box-shadow: 0 4px 7px rgba($black, 0.1);
+    box-shadow: 0 4px 7px rgba($black, .1);
     display: none;
 
     .header-item {
-      border-top: 1px solid rgba($border, 0.5);
+      border-top: 1px solid rgba($border, .5);
       padding: 10px;
     }
 
     // Modifiers
     &.is-active {
       display: block;
-    }
-  }
-}
-
-// States
-
-.header.is-centered {
-  justify-content: center;
-
-  .header-left,
-  .header-right {
-    justify-content: center;
-  }
-}
-
-.header.is-small {
-  background-color: $background;
-  box-shadow: none;
-  height: 40px;
-  z-index: 1;
-
-  .container {
-    height: 40px;
-  }
-
-  .header-tab {
-    font-size: 13px;
-    height: 40px;
-    padding: 8px 10px;
-
-    &:hover,
-    &.is-active {
-      border-bottom-width: 2px;
     }
   }
 }

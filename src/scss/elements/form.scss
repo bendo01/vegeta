@@ -417,7 +417,7 @@
 
   &.is-loading {
     &:after {
-      @extend .loader;
+      @extend %loader;
 
       position: absolute !important;
       right: 8px;

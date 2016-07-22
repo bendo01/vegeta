@@ -1,6 +1,6 @@
 // Display
 
-$displays: "block" "flex" "inline" "inline-block" "inline-flex";
+$displays: 'block' 'flex' 'inline' 'inline-block' 'inline-flex';
 
 @each $display in $displays {
   .is-#{$display} {
@@ -149,5 +149,5 @@ $displays: "block" "flex" "inline" "inline-block" "inline-flex";
 }
 
 .is-unselectable {
-  @extend .unselectable;
+  @extend %unselectable;
 }

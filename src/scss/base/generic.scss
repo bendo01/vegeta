@@ -29,9 +29,9 @@ textarea {
 
 code,
 pre {
+  font-family: $family-code;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: auto;
-  font-family: $family-code;
   line-height: 1.25;
 }
 

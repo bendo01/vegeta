@@ -2,7 +2,7 @@
   border: 1px solid $color;
   border-right: 0;
   border-top: 0;
-  content: " ";
+  content: ' ';
   display: block;
   height: 7px;
   pointer-events: none;
@@ -12,9 +12,9 @@
 }
 
 @mixin clearfix {
-  &:after {
+  &::after {
     clear: both;
-    content: " ";
+    content: ' ';
     display: table;
   }
 }
@@ -46,7 +46,7 @@
 }
 
 @mixin placeholder {
-  $placeholders: ":-moz" ":-webkit-input" "-moz" "-ms-input";
+  $placeholders: ':-moz' ':-webkit-input' '-moz' '-ms-input';
 
   @each $placeholder in $placeholders {
     &:#{$placeholder}-placeholder {

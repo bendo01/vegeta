@@ -22,10 +22,8 @@
 }
 
 .button {
+  @extend %unselectable;
   @include control;
-
-  @extend .unselectable;
-
   justify-content: center;
   padding-left: 10px;
   padding-right: 10px;
@@ -63,7 +61,7 @@
   }
 
   &:active {
-    box-shadow: inset 0 1px 2px rgba($black, 0.2);
+    box-shadow: inset 0 1px 2px rgba($black, .2);
   }
 
   // Colors
@@ -147,7 +145,7 @@
   // Modifiers
   &[disabled],
   &.is-disabled {
-    opacity: 0.5;
+    opacity: .5;
   }
 
   &.is-fullwidth {
@@ -160,7 +158,7 @@
     pointer-events: none;
 
     &:after {
-      @extend .loader;
+      @extend %loader;
 
       @include center(16px);
 

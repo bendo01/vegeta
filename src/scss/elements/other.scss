@@ -1,10 +1,10 @@
 .delete {
-  @extend .unselectable;
+  @extend %unselectable;
 
   -moz-appearance: none;
   -webkit-appearance: none;
-  background-color: rgba($black, 0.2);
-  border: none;
+  background-color: rgba($black, .2);
+  border: 0;
   border-radius: 290486px;
   cursor: pointer;
   display: inline-block;
@@ -16,7 +16,7 @@
   &:before,
   &:after {
     background-color: $white;
-    content: "";
+    content: '';
     display: block;
     height: 2px;
     left: 50%;
@@ -36,7 +36,7 @@
   }
 
   &:hover {
-    background-color: rgba($black, 0.5);
+    background-color: rgba($black, .5);
   }
 
   // Sizes
@@ -156,18 +156,18 @@
   padding: 0;
 
   pre {
-    overflow: auto;
     max-width: 100%;
+    overflow: auto;
   }
 }
 
-.loader {
+%loader {
   animation: spin-around 500ms infinite linear;
   border: 2px solid $border;
   border-radius: 290486px;
   border-right-color: transparent;
   border-top-color: transparent;
-  content: "";
+  content: '';
   display: block;
   height: 16px;
   position: relative;
@@ -248,10 +248,6 @@
   }
 }
 
-.unselectable {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+%unselectable {
   user-select: none;
 }
