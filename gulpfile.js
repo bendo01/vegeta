@@ -12,7 +12,8 @@ var uglify = require('gulp-uglify');
 var postcss = require('gulp-postcss');
 var vfs = require('vinyl-fs');
 var converter = require('sass-convert');
-
+var autoprefixer = require('autoprefixer');
+var cssnano = require('cssnano');
 var config = {
    sassPath: './src/scss',
   npmDir: './node_modules'
@@ -31,6 +32,10 @@ gulp.task('convert-to-scss', function () {
 });
 
 gulp.task('compile-scss', function () {
+  var processors = [
+    autoprefixer({browsers: ['last 1 version']}),
+    //cssnano(),
+  ];
   gulp.src('vegeta.scss')
   .pipe(sourcemaps.init())
   .pipe(sass({includePaths: [
@@ -42,10 +47,7 @@ gulp.task('compile-scss', function () {
   .on("error", notify.onError(function (error) {
     return "Error: " + error.message;
   }))
-  .pipe(postcss([
-      require('autoprefixer')({}),
-      //require('cssnano')
-  ]))
+  .pipe(postcss(processors))
   .pipe(gulp.dest('dist/css'))
   .pipe(gulp.dest("test/css"))
   .pipe(browserSync.stream());
