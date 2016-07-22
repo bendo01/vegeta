@@ -13,8 +13,8 @@
   vertical-align: top;
   width: 24px;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     background-color: $white;
     content: '';
     display: block;
@@ -27,11 +27,11 @@
     width: 50%;
   }
 
-  &:before {
+  &::before {
     transform: rotate(45deg);
   }
 
-  &:after {
+  &::after {
     transform: rotate(-45deg);
   }
 
