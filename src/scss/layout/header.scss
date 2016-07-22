@@ -37,7 +37,7 @@ $header-height: 50px !default;
 }
 
 .header-toggle {
-  @extend .hamburger;
+  @extend %hamburger;
 
   position: absolute;
   right: 0;
