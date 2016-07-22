@@ -1,5 +1,5 @@
 .tabs {
-  @extend .block;
+  @extend %block;
 
   @extend .unselectable;
 

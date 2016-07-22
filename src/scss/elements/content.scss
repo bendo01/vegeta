@@ -1,5 +1,5 @@
 .content {
-  @extend .block;
+  @extend %block;
 
   // Inline
   a:not(.button) {

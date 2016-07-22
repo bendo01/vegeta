@@ -1,5 +1,5 @@
 .notification {
-  @extend .block;
+  @extend %block;
 
   @include clearfix;
 

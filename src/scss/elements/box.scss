@@ -1,5 +1,5 @@
 .box {
-  @extend .block;
+  @extend %block;
 
   background-color: $white;
   border-radius: $radius-large;

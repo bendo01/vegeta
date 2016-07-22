@@ -51,7 +51,7 @@
 }
 
 .navbar {
-  @extend .block;
+  @extend %block;
 
   align-items: center;
   justify-content: space-between;

@@ -1,6 +1,6 @@
 .title,
 .subtitle {
-  @extend .block;
+  @extend %block;
 
   font-weight: $weight-title-normal;
   word-break: break-word;
