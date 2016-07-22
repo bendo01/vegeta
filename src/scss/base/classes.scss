@@ -1,26 +1,31 @@
 .block {
   &:not(:last-child) {
-    margin-bottom: $block-base-margin;
+    margin-bottom: 20px;
   }
 }
 
 .container {
   position: relative;
+
   @include desktop {
     margin: 0 auto;
-    max-width: 60em;
+    max-width: 960px;
+
+    // Modifiers
     &.is-fluid {
-      margin: 0 $block-base-margin;
+      margin: 0 20px;
       max-width: none;
     }
   }
+
+
   @include widescreen {
-    max-width: 75em;
+    max-width: 1200px;
   }
 }
 
 .fa {
-  font-size: $fa-font-size;
+  font-size: 21px;
   text-align: center;
   vertical-align: top;
 }

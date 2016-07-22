@@ -3,11 +3,12 @@ html {
   font-size: $size-normal;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  min-width: 18.750em;
+  min-width: 300px;
   overflow-x: hidden;
   overflow-y: scroll;
   text-rendering: optimizeLegibility;
 }
+
 article,
 aside,
 figure,
@@ -17,6 +18,7 @@ hgroup,
 section {
   display: block;
 }
+
 body,
 button,
 input,
@@ -24,76 +26,97 @@ select,
 textarea {
   font-family: $family-primary;
 }
+
 code,
 pre {
-  font-smooth: auto;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
   font-family: $family-code;
-  line-height: 1.25em;
+  line-height: 1.25;
 }
+
 body {
   color: $text;
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: $weight-normal;
-  line-height: 1.428571428571429em;
+  line-height: 1.42857;
 }
+
+// Inline
+
 a {
   color: $link;
   cursor: pointer;
   text-decoration: none;
   transition: none $speed $easing;
+
   &:hover {
     color: $link-hover;
   }
 }
+
 code {
   background-color: $code-background;
   color: $code;
-  font-size: 0.750em;
+  font-size: 12px;
   font-weight: normal;
-  padding: 0.063em 0.125em 0.125em;
+  padding: 1px 2px 2px;
 }
+
 hr {
   border-top-color: $border;
-  margin: $block-base-margin 0;
+  margin: 20px 0;
 }
+
 img {
   max-width: 100%;
 }
+
 input[type="checkbox"],
 input[type="radio"] {
   vertical-align: baseline;
 }
+
 small {
   font-size: $size-small;
 }
+
 span {
   font-style: inherit;
   font-weight: inherit;
 }
+
 strong {
   color: $text-strong;
   font-weight: $weight-bold;
 }
+
+// Block
+
 pre {
   background-color: $pre-background;
   color: $pre;
   white-space: pre;
   word-wrap: normal;
+
   code {
     background-color: $pre-background;
     color: $pre;
     display: block;
     overflow-x: auto;
-    padding: 1em 1.25em;
+    padding: 16px 20px;
   }
 }
+
 table {
   width: 100%;
-  th,
-  td {
+
+  td,
+  th {
     text-align: left;
     vertical-align: top;
   }
+
   th {
     color: $text-strong;
   }

@@ -1,4 +1,4 @@
-@mixin arrow ($color) {
+@mixin arrow($color) {
   border: 1px solid $color;
   border-right: 0;
   border-top: 0;
@@ -10,6 +10,7 @@
   transform: rotate(-45deg);
   width: 7px;
 }
+
 @mixin clearfix {
   &:after {
     clear: both;
@@ -17,6 +18,7 @@
     display: table;
   }
 }
+
 @mixin center($size) {
   left: 50%;
   margin-left: -($size / 2);
@@ -24,6 +26,7 @@
   position: absolute;
   top: 50%;
 }
+
 @mixin fa($size, $dimensions) {
   display: inline-block;
   font-size: $size;
@@ -33,6 +36,7 @@
   vertical-align: top;
   width: $dimensions;
 }
+
 @mixin overlay($offset: 0) {
   bottom: $offset;
   left: $offset;
@@ -40,14 +44,17 @@
   right: $offset;
   top: $offset;
 }
+
 @mixin placeholder {
-  $placeholders: ':-moz' ':-webkit-input' '-moz' '-ms-input';
+  $placeholders: ":-moz" ":-webkit-input" "-moz" "-ms-input";
+
   @each $placeholder in $placeholders {
     &:#{$placeholder}-placeholder {
       @content;
     }
   }
 }
+
 @mixin replace($background, $width, $height) {
   background-color: $background;
   background-position: center center;
@@ -57,111 +64,60 @@
   height: $height;
   outline: none;
   overflow: hidden;
-  text-indent: -18155.375em;
+  text-indent: -290486px;
   width: $width;
 }
+
 @mixin from($device) {
   @media screen and (min-width: $device) {
     @content;
   }
 }
+
 @mixin until($device) {
-  @media screen and (max-width: ($device - 1px)) {
+  @media screen and (max-width: $device - 1px) {
     @content;
   }
 }
+
 @mixin mobile {
-  @media screen and (max-width: ($tablet - 1px)) {
+  @media screen and (max-width: $tablet - 1px) {
     @content;
   }
 }
+
 @mixin tablet {
   @media screen and (min-width: $tablet) {
     @content;
   }
 }
+
 @mixin tablet-only {
-  @media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
     @content;
   }
 }
+
 @mixin touch {
-  @media screen and (max-width: ($desktop - 1px)) {
+  @media screen and (max-width: $desktop - 1px) {
     @content;
   }
 }
+
 @mixin desktop {
   @media screen and (min-width: $desktop) {
     @content;
   }
 }
+
 @mixin desktop-only {
-  @media screen and (min-width: $desktop) and (max-width: ($widescreen - 1px)) {
+  @media screen and (min-width: $desktop) and (max-width: $widescreen - 1px) {
     @content;
   }
 }
+
 @mixin widescreen {
   @media screen and (min-width: $widescreen) {
     @content;
-  }
-}
-/* additional vegeta mixin */
-@mixin background-and-text-color {
-  @each $colorname, $colornumber in $colorlists {
-    &.text-is-#{$colorname} {
-      color: $colornumber;
-    }
-    &.background-is-#{$colorname} {
-      background-color: $colornumber;
-    }
-  }
-}
-
-@mixin circular--square {
-  &.circular-square {
-    img {
-      border-radius: 50%;
-    }
-  }
-}
-
-/* https://techblog.livingsocial.com/blog/2015/04/06/responsive-tables-in-pure-css */
-/* http://www.w3schools.com/howto/howto_css_table_responsive.asp */
-
-@mixin mobile-responsive-handler($allow-mobile-table-view:'dont') {
-  @if($allow-mobile-table-view == 'yes') {
-    @include mobile {
-      & {
-        border: 0;
-      }
-
-      & thead,tfoot {
-        display: none;
-      }
-
-      & tr {
-        margin-bottom: 10px;
-        display: block;
-        border-bottom: 2px solid $border;
-      }
-
-      & td {
-        display: block;
-        text-align: right;
-        font-size: 13px;
-        border-bottom: 1px dotted $border;
-      }
-
-      & td:last-child {
-        border-bottom: 0;
-      }
-
-      & td:before {
-        content: attr(data-label);
-        float: left;
-        text-transform: uppercase;
-        font-weight: bold;
-      }
-    }
   }
 }

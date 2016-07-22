@@ -4,21 +4,26 @@
     padding: 5px 10px;
   }
 }
+
 .menu-list {
   a {
     border-radius: $radius-small;
     color: $text;
     display: block;
     padding: 5px 10px;
+
     &:hover {
       background-color: $background;
       color: $link;
     }
+
+    // Modifiers
     &.is-active {
       background-color: $link;
       color: $link-invert;
     }
   }
+
   li {
     ul {
       border-left: 1px solid $border;
@@ -27,42 +32,15 @@
     }
   }
 }
+
 .menu-label {
   color: $text-light;
   font-size: $size-small;
   letter-spacing: 1px;
   margin-bottom: 5px;
   text-transform: uppercase;
+
   &:not(:first-child) {
     margin-top: 20px;
-  }
-}
-
-.menu {
-  // Modifiers
-  &.is-inverted {
-    background: $black;
-    .menu-list {
-      a {
-        color: $text-invert;
-        &:hover {
-          background: $background-invert;
-          color: $link-invert;
-        }
-        // Modifiers
-        &.is-active {
-          background: $link-invert;
-          color: $link;
-        }
-      }
-      li {
-        ul {
-          border-left: 1px solid $border-invert;
-        }
-      }
-    }
-    .menu-label {
-      color: $text-light-invert;
-    }
   }
 }

@@ -1,18 +1,22 @@
 .footer {
-  background-color: $footer-background;
+  background-color: $background;
   padding: 40px 20px 80px;
+
   a {
     &,
     &:visited {
       color: $text;
-    }
-    &:hover {
-      color: $text-strong;
-    }
-    &:not(.icon) {
-      border-bottom: 1px solid $border;
+
       &:hover {
-        border-bottom-color: $link;
+        color: $text-strong;
+      }
+
+      &:not(.icon) {
+        border-bottom: 1px solid $border;
+
+        &:hover {
+          border-bottom-color: $link;
+        }
       }
     }
   }
