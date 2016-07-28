@@ -1,6 +1,8 @@
+$media-number-border-radius: 290486px !default;
+
 .media-number {
   background-color: $background;
-  border-radius: 290486px;
+  border-radius: $media-number-border-radius;
   display: inline-block;
   font-size: $size-medium;
   height: 32px;
