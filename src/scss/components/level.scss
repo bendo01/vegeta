@@ -1,14 +1,14 @@
 .level-item {
-  .title,
-  .subtitle {
-    margin-bottom: 0;
-  }
-
   // Responsiveness
   @include mobile {
     &:not(:last-child) {
       margin-bottom: 10px;
     }
+  }
+
+  .title,
+  .subtitle {
+    margin-bottom: 0;
   }
 }
 
@@ -55,6 +55,16 @@
 
   align-items: center;
   justify-content: space-between;
+  // Responsiveness
+  @include tablet {
+    display: flex;
+
+    & > .level-item {
+      &:not(.is-narrow) {
+        flex: 1;
+      }
+    }
+  }
 
   code {
     border-radius: $radius;
@@ -74,17 +84,6 @@
         margin-bottom: 0;
       }
 
-      &:not(.is-narrow) {
-        flex: 1;
-      }
-    }
-  }
-
-  // Responsiveness
-  @include tablet {
-    display: flex;
-
-    & > .level-item {
       &:not(.is-narrow) {
         flex: 1;
       }

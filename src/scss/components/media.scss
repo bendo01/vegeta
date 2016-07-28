@@ -17,7 +17,6 @@ $media-number-border-radius: 290486px !default;
     margin-bottom: 10px;
   }
 
-
   @include tablet {
     margin-right: 10px;
   }
@@ -37,9 +36,19 @@ $media-number-border-radius: 290486px !default;
 }
 
 .media {
+
   align-items: flex-start;
   display: flex;
   text-align: left;
+
+  // Responsiveness
+  @include tablet {
+    &.is-large {
+      .media-number {
+        margin-right: 20px;
+      }
+    }
+  }
 
   .content:not(:last-child) {
     margin-bottom: 10px;
@@ -75,15 +84,6 @@ $media-number-border-radius: 290486px !default;
     & + .media {
       margin-top: 20px;
       padding-top: 20px;
-    }
-  }
-
-  // Responsiveness
-  @include tablet {
-    &.is-large {
-      .media-number {
-        margin-right: 20px;
-      }
     }
   }
 }
