@@ -39,7 +39,9 @@ $header-height: 50px !default;
     .header-left,
     .header-right {
       justify-content: center;
+    }
   }
+
   &.is-small {
     background-color: $background;
     box-shadow: none;
@@ -83,6 +85,11 @@ $header-height: 50px !default;
   display: flex;
   padding: 10px;
 
+  // Responsiveness
+  @include mobile {
+    text-align: left;
+  }
+
   a {
     flex-grow: 1;
   }
@@ -108,11 +115,6 @@ $header-height: 50px !default;
     &:last-child {
       margin-left: 5px;
     }
-  }
-
-  // Responsiveness
-  @include mobile {
-    text-align: left;
   }
 }
 
