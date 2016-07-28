@@ -2,6 +2,7 @@
   @extend %block;
 
   // Inline
+  //note disbaled because causing double border on card footer
   a:not(.button) {
     border-bottom: 1px solid $border;
 
@@ -15,7 +16,7 @@
   }
 
   li + li {
-    margin-top: 0.25em;
+    margin-top: .25em;
   }
 
   // Block
@@ -93,7 +94,7 @@
 
     ul {
       list-style-type: circle;
-      margin-top: 0.5em;
+      margin-top: .5em;
 
       ul {
         list-style-type: square;
