@@ -1,9 +1,10 @@
 .progress {
   @extend %block;
 
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  border: none;
+  //-moz-appearance: none;
+  //-webkit-appearance: none;
+  appearance: none;
+  border: 0;
   border-radius: 290486px;
   display: block;
   height: 12px;
