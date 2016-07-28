@@ -103,8 +103,8 @@
       &.is-active {
         a {
           background-color: $white;
-          border-color: $border;
           border-bottom-color: transparent !important;
+          border-color: $border;
         }
       }
     }
